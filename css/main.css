@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 23px;
+  font-family: 'Harmattan', sans-serif;
+  letter-spacing: .2px;
+  font-weight: 100;
+  line-height: 1.5;
+  list-style: none;
+  text-decoration: none;
+}
+
+.wrapper {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.max-width {
+  max-width: 1100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero-wrapper {
+  background: #00d184;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.phone img {
+  width: 270px;
+  -webkit-box-shadow: 0px 1px 50px rgba(21, 33, 41, 0.1);
+          box-shadow: 0px 1px 50px rgba(21, 33, 41, 0.1);
+  border-radius: 20px;
+}
+
+h1, h2, h3 {
+  font-size: 300%;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+h3 {
+  font-size: 160%;
+}
+
+.norm {
+  opacity: .7;
+}
+
+.hero {
+  min-height: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 200px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hero * {
+  color: #fff;
+}
+
+.hero .text, .hero .phone-rapper {
+  width: 100%;
+}
+
+.hero .text {
+  padding-right: 70px;
+}
+
+.hero .text .heading {
+  text-transform: capitalize;
+}
+
+.hero .text .norm {
+  padding: 40px 0;
+  max-width: 30pc;
+  opacity: 1;
+}
+
+.track-rapper {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background: #f4f7fa;
+  border-radius: 20px;
+  margin-top: -200px;
+}
+
+.track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.track .text, .track .phone-rapper {
+  width: 100%;
+}
+
+.track .phone-rapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.track .phone-rapper .phone {
+  display: block;
+  margin: 0 auto;
+  position: fixed;
+  top: 230px;
+}
+
+.track .phone-rapper .phone img {
+  -webkit-transform: translate(-30%, 0) rotate(20deg);
+          transform: translate(-30%, 0) rotate(20deg);
+}
+
+.track .phone-rapper .stick.phone {
+  position: relative !important;
+  right: 0 !important;
+  top: 0;
+  margin: 0 0 0 auto;
+}
+
+.track .text {
+  max-width: 30pc;
+}
+
+.track .text .norm {
+  margin: 20px 0;
+}
+
+.track .text .cards {
+  margin-top: 100px;
+}
+
+.track .text .cards .card {
+  padding: 10px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 280px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 50px rgba(21, 33, 41, 0.1);
+          box-shadow: 0px 1px 50px rgba(21, 33, 41, 0.1);
+  margin: 30px 0;
+  border-radius: 10px;
+  -webkit-transform: translate(-100px, 0);
+          transform: translate(-100px, 0);
+  opacity: 0;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.track .text .cards .card.animate {
+  -webkit-transform: translate(0px, 0);
+          transform: translate(0px, 0);
+  opacity: 1;
+}
+
+.track .text .cards .card:nth-child(1), .track .text .cards .card:nth-child(3) {
+  margin-left: -20px;
+}
+
+.track .text .cards .card:nth-child(2) {
+  margin-left: 20px;
+}
+
+.track .text .cards .card .icon {
+  background-color: #00d18425;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  margin-right: 30px;
+  border-radius: 5px;
+}
+
+.track .text .cards .card .icon img {
+  height: 20px;
+}
+
+.track .text .cards .card .co-red {
+  color: red;
+  line-height: 1;
+  font-weight: 900;
+  opacity: .7;
+  font-size: 105%;
+}
+
+.save-rapper {
+  margin-top: 0;
+}
+
+.save-rapper .save {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.save-rapper .save .text {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40px;
+  margin-left: 100px;
+}
+
+.save-rapper .save .phone {
+  position: unset;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transform: translate(-200px, 200px) rotate(-20deg) scale(0.8);
+          transform: translate(-200px, 200px) rotate(-20deg) scale(0.8);
+  opacity: 0;
+  -webkit-transition: .9s ease-in-out;
+  transition: .9s ease-in-out;
+}
+
+.save-rapper .save .phone.animate {
+  -webkit-transform: translate(0px, 0) rotate(0deg) scale(1);
+          transform: translate(0px, 0) rotate(0deg) scale(1);
+  opacity: 1;
+}
+
+.save-rapper .save .phone img {
+  position: unset;
+  -webkit-transform: none;
+          transform: none;
+}
+/*# sourceMappingURL=main.css.map */

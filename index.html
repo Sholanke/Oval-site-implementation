@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Harmattan&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="wrapper hero-wrapper">   
+        <div class="hero max-width">
+            <div class="text">
+                <h1 class="heading">Your financial future is in your hands.</h1>
+                <p class="norm">Choose the smartest way to manage your personal finances. Track your spending, Save and Invest automatically.</p>
+            </div>
+            <div class="phone-rapper">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper track-rapper">
+        <div class="track max-width hero-second">
+            <div class="text">
+                <h3>Track and Manage your spending. For real.</h3>
+                <p class="norm">Forget calculations, notes, and spreadsheets: with Oval, you have your finances at your fingertips.</p>
+                <p class="norm">Link your accounts and cards to the app to be just one click away from monitoring your spending, saving, and budgeting habits. Keep an eye on what affects your finances to stay on track and get the most out of your money.</p>
+                <div class="cards">
+                    <div class="card pre-animate">
+                        <span class="icon"><img src="./Polygon 1.svg" alt="" srcset=""></span>
+                        <li>
+                            <p class="title">Bet Naija</p>
+                            <p class="co-red">-40.32 $</p>
+                        </li>
+                    </div>
+                    <div class="card pre-animate">
+                        <span class="icon"><img src="./Rectangle 1.svg" alt="" srcset=""></span>
+                        <li>
+                            <p class="title">Bet Naija</p>
+                            <p class="co-red">-40.32 $</p>
+                        </li>
+                    </div>
+                    <div class="card pre-animate">
+                        <span class="icon"><img src="./Ellipse 12.svg" alt="" srcset=""></span>
+                        <li>
+                            <p class="title">Bet Naija</p>
+                            <p class="co-red">-40.32 $</p>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="phone-rapper">
+                <div class="phone hero-phone">
+                    <img class="" src="./phone.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper track-rapper save-rapper">
+        <div class="track max-width hero-second save">
+            <div class="text">
+                <h3>Save. Invest. Grow. Automatically.</h3>
+                <p class="norm">Fulfill your financial ambitions. Oval helps you achieve your goals without even noticing, thanks to individual savings plans tailored to your needs.</p>
+                <p class="norm">Invest in your future. Start small and over time build a diverse portfolio that reflects the values you believe in.</p>
+             
+            </div>
+            <div class="phone-rapper">
+                <div class="phone pre-animate">
+                    <img src="./phone2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const secondHero = document.querySelector(".hero-second")
+        const Hero_phone = document.querySelector(".hero-phone");
+        // position the phone for animation
+        const posPhone = ()=>{
+            if(window.innerWidth >= 1100){
+                const num = (window.innerWidth - secondHero.offsetWidth)/2
+                // console.log(num)
+                Hero_phone.style.right = `${num}px`;
+            }
+        }
+        //getting the phone stick point
+        const phoneStickPoint = Hero_phone.getBoundingClientRect().top
+        //performing rotation of phone
+        const rotate_phone = ()=>{
+            let bdy_pos = document.querySelector("body").getBoundingClientRect().top
+            bdy_pos = bdy_pos * .05
+            bdy_pos+=20
+            Hero_phone.querySelector("img").style.transform = `translate(-30%, 0) rotate(${bdy_pos >= 0 ? bdy_pos : 0}deg)`
+        }
+        const checkPhoneSitting = ()=>{
+            const hero_pos = secondHero.getBoundingClientRect().top
+            const phone_pos  = Hero_phone.getBoundingClientRect().top
+            // console.log(phone_pos, hero_pos)
+            hero_pos <= phone_pos ? Hero_phone.classList.add("stick") : false;
+            hero_pos >= phoneStickPoint ? Hero_phone.classList.remove("stick") : false;
+            rotate_phone()
+        }
+        window.addEventListener("scroll", ()=>{
+            checkPhoneSitting()
+        })
+        window.addEventListener("load", ()=>{
+            posPhone()
+        })
+        window.addEventListener("resize", ()=>{
+            posPhone()
+        })
+
+        const observer = new IntersectionObserver((entries, observer )=>{
+            entries.forEach(e=>{
+                e.isIntersecting ? e.target.classList.add('animate') : e.target.classList.remove("animate");
+            })
+        })
+
+        document.querySelectorAll(".pre-animate").forEach(elem =>{
+            observer.observe(elem)
+        })
+
+
+    </script>
+</body>
+</html>
